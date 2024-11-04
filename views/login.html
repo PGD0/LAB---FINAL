@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Tornillo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
+
     <div id="logo"> 
         <h1><i>El Tornillo</i></h1>
       </div> 
       <section class="stark-login">
-        
-        <form action="" method="">	
+        <form id="loginForm" action="/validar" method="POST">	
           <div id="fade-box">
             <input type="text" name="username" id="username" placeholder="Username" required>
-              <input type="password" placeholder="Password" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
               
               <div class="select-wrapper">
                 <select class="role-selector">
                     <option value="usuario">Usuario</option>
                     <option value="administrador">Administrador</option>
                 </select>
+              </div>  
+              <button id="LogIn">Log In</button> 
             </div>
-                
-                <button>Log In</button> 
-              </div>
-            </form>
+            <div id="alert" class="alert">
+              <span class="closebtn" onclick="closeAlert()">&times;</span> 
+              <strong id="alertTitle"></strong> <span id="alertMessage"></span>
+            </div>
+        </form>
             <div class="hexagons">
               <span>&#x2B22;</span>
               <span>&#x2B22;</span>
@@ -99,9 +102,6 @@
                       
                     </div>
                   </div>
-                  
-                  
-                  
                   <ul>
                     <li></li>
                     <li></li>
@@ -109,6 +109,6 @@
                     <li></li>
                     <li></li>
                   </ul>
-                      
+    <script src="/public/js/mensaje.js"></script>
 </body>
 </html>
